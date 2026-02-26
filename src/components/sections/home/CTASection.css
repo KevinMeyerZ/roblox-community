@@ -1,4 +1,9 @@
 .cta-section {
+  background: #050A18;
+  background-image:
+    radial-gradient(ellipse 70% 55% at 50% 50%, rgba(37, 99, 235, 0.2) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 10% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 55%);
   padding: 8rem 0;
   position: relative;
   overflow: hidden;
@@ -13,12 +18,10 @@
 .cta-gradient {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(21, 101, 216, 0.18) 0%,
-    rgba(255, 26, 201, 0.08) 55%,
-    transparent 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(21, 101, 216, 0.18) 0%,
+      rgba(255, 26, 201, 0.08) 55%,
+      transparent 100%);
 }
 
 .cta-shapes {
@@ -175,12 +178,16 @@
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) translateX(0);
   }
+
   33% {
     transform: translateY(-30px) translateX(20px);
   }
+
   66% {
     transform: translateY(20px) translateX(-20px);
   }

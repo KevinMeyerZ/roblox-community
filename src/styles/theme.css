@@ -58,9 +58,9 @@
 
   /* Text Colors */
   --text-primary: #F0F4FF;
-  --text-secondary: #94A3B8;
-  --text-tertiary: #64748B;
-  --text-dim: #475569;
+  --text-secondary: #F0F4FF;
+  --text-tertiary: #F0F4FF;
+  --text-dim: #CBD5E1;
 
   /* Border Colors */
   --border-default: rgba(59, 130, 246, 0.2);

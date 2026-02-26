@@ -3,7 +3,10 @@
    ===================================================== */
 
 .games-section {
-  background: var(--bg-deep);
+  background: #050A18;
+  background-image:
+    radial-gradient(ellipse 60% 50% at 15% 30%, rgba(37, 99, 235, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 70%, rgba(139, 92, 246, 0.14) 0%, transparent 55%);
   padding: 5rem 0;
   position: relative;
   overflow: hidden;
@@ -190,7 +193,7 @@
   gap: 0.5rem;
   padding: 0.7rem 1.25rem;
   background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-  color: black;
+  color: white;
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.9rem;

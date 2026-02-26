@@ -8,7 +8,11 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: #ffffff;
+  background: #050B1A;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 20% 20%, rgba(37, 99, 235, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 80%, rgba(139, 92, 246, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 60% 10%, rgba(236, 72, 153, 0.12) 0%, transparent 50%);
 }
 
 /* ===== Grid Overlay ===== */
@@ -16,13 +20,13 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+    linear-gradient(rgba(99, 130, 246, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99, 130, 246, 0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
   pointer-events: none;
   z-index: 0;
-  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, transparent 70%);
-  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.6) 0%, transparent 70%);
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
 }
 
 /* ===== CSS Animated Blobs ===== */
@@ -36,7 +40,7 @@
 .hero-blob-1 {
   width: 700px;
   height: 700px;
-  background: rgba(37, 99, 235, 0.08);
+  background: rgba(37, 99, 235, 0.2);
   top: -200px;
   left: -200px;
   animation: blob-float-1 9s ease-in-out infinite;
@@ -45,7 +49,7 @@
 .hero-blob-2 {
   width: 500px;
   height: 500px;
-  background: rgba(236, 72, 153, 0.06);
+  background: rgba(139, 92, 246, 0.18);
   bottom: -150px;
   right: -100px;
   animation: blob-float-2 11s ease-in-out infinite 2s;
@@ -54,7 +58,7 @@
 .hero-blob-3 {
   width: 400px;
   height: 400px;
-  background: rgba(251, 191, 36, 0.05);
+  background: rgba(236, 72, 153, 0.13);
   top: 40%;
   left: 40%;
   transform: translate(-50%, -50%);
@@ -64,8 +68,8 @@
 /* ===== Star Decorations ===== */
 .hero-star {
   position: absolute;
-  color: #2563EB;
-  opacity: 0.25;
+  color: #60A5FA;
+  opacity: 0.4;
   animation: sparkle-twinkle 3s ease-in-out infinite;
   pointer-events: none;
   z-index: 1;
@@ -83,9 +87,9 @@
 .particle-star {
   position: absolute;
   font-size: 0.85rem;
-  color: #2563EB;
+  color: #93C5FD;
   opacity: 0;
-  text-shadow: 0 0 6px rgba(37, 99, 235, 0.4);
+  text-shadow: 0 0 10px rgba(147, 197, 253, 0.7);
 }
 
 /* ===== Hero Content ===== */
@@ -114,14 +118,14 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.45rem 1.1rem;
-  background: rgba(37, 99, 235, 0.07);
+  background: rgba(37, 99, 235, 0.12);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(37, 99, 235, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.3);
   border-radius: 9999px;
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 700;
-  color: #1D4ED8;
+  color: #93C5FD;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -172,11 +176,12 @@
   letter-spacing: -0.01em;
 }
 
-/* ROBLOX — abu gelap biar kontras di background putih */
+/* ROBLOX — putih terang untuk dark bg */
 .hero-title-roblox {
   display: inline-block;
-  color: #0F172A;
+  color: #F0F4FF;
   letter-spacing: 0.02em;
+  text-shadow: 0 0 40px rgba(99, 130, 246, 0.3);
 }
 
 .hero-title-tallent {
@@ -200,7 +205,7 @@
   font-family: var(--font-body);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.75;
-  color: #475569;
+  color: #F0F4FF;
   max-width: 580px;
 }
 
@@ -261,13 +266,13 @@
 
 .hero-pill {
   padding: 0.35rem 1rem;
-  background: rgba(37, 99, 235, 0.06);
-  border: 1px solid rgba(37, 99, 235, 0.15);
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.25);
   border-radius: 9999px;
   font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 600;
-  color: #475569;
+  color: #F0F4FF;
   backdrop-filter: blur(8px);
   transition: border-color 0.2s, color 0.2s, box-shadow 0.2s;
   cursor: default;
@@ -286,12 +291,12 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0;
-  background: rgba(241, 245, 249, 0.85);
+  background: rgba(15, 28, 60, 0.7);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.25);
   border-radius: 9999px;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .hero-stat-bubble {
@@ -327,14 +332,14 @@
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 400;
-  color: #0F172A;
+  color: #F0F4FF;
   line-height: 1;
 }
 
 .stat-bubble-label {
   font-family: var(--font-body);
   font-size: 0.7rem;
-  color: #64748B;
+  color: #F0F4FF;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
@@ -363,14 +368,14 @@
 .scroll-text {
   font-family: var(--font-body);
   font-size: 0.6rem;
-  color: rgba(71, 85, 105, 0.55);
+  color: rgba(148, 163, 184, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   transition: color 0.2s;
 }
 
 .scroll-indicator:hover .scroll-text {
-  color: #2563EB;
+  color: #60A5FA;
 }
 
 .scroll-arrow {
@@ -378,8 +383,8 @@
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  color: #2563EB;
-  opacity: 0.55;
+  color: #60A5FA;
+  opacity: 0.6;
   transition: color 0.2s, opacity 0.2s;
 }
 

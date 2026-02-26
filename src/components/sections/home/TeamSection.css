@@ -3,7 +3,10 @@
    ===================================================== */
 
 .team-section {
-  background: var(--bg-alt);
+  background: #060C20;
+  background-image:
+    radial-gradient(ellipse 65% 45% at 20% 40%, rgba(251, 191, 36, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 40% at 80% 60%, rgba(139, 92, 246, 0.1) 0%, transparent 55%);
   padding: 5rem 0;
   position: relative;
 }

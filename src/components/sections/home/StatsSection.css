@@ -1,4 +1,8 @@
 .stats-section {
+  background: #050A18;
+  background-image:
+    radial-gradient(ellipse 60% 45% at 50% 0%, rgba(37, 99, 235, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 35% at 85% 90%, rgba(16, 185, 129, 0.1) 0%, transparent 55%);
   padding: 6rem 0;
   position: relative;
   overflow: hidden;
@@ -95,7 +99,7 @@
 
 .stat-icon-success {
   background: linear-gradient(135deg, var(--color-success), var(--color-success-dark));
-  color: var(--bg-dark);
+  color: white;
   box-shadow: 0 8px 32px rgba(0, 255, 136, 0.3);
 }
 

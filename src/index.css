@@ -19,6 +19,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-base);
+  background-color: #050B1A;
   color: var(--text-primary);
   overflow-x: hidden;
 }

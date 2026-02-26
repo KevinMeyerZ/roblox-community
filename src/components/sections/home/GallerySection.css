@@ -3,7 +3,10 @@
    ===================================================== */
 
 .gallery-section {
-  background: var(--bg-alt);
+  background: #050A18;
+  background-image:
+    radial-gradient(ellipse 55% 40% at 75% 25%, rgba(6, 182, 212, 0.1) 0%, transparent 55%),
+    radial-gradient(ellipse 45% 35% at 25% 75%, rgba(236, 72, 153, 0.08) 0%, transparent 55%);
   padding: 5rem 0;
   position: relative;
 }
@@ -53,9 +56,6 @@
   transition: transform var(--transition-slow);
 }
 
-.gallery-item-tall img {
-  /* Natural tall aspect — no override needed */
-}
 
 .gallery-item:hover img {
   transform: scale(1.06);
