@@ -112,8 +112,8 @@ const HeroSection = () => {
           >
             <span className="badge-icon">🎮</span>
             <span>Komunitas Roblox Indonesia</span>
-            <span className="hero-badge-dot" />
-            <span className="hero-badge-live">LIVE</span>
+            {/* <span className="hero-badge-dot" />
+            <span className="hero-badge-live">LIVE</span> */}
           </motion.div>
 
           {/* Main Title */}

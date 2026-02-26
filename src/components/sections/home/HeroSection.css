@@ -245,7 +245,7 @@
 
 .hero-btn-secondary {
   background: transparent;
-  color: var(--color-blue-lighter);
+  color: white;
   border: 2px solid rgba(59, 130, 246, 0.5);
 }
 
