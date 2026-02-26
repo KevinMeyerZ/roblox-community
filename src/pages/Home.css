@@ -1,0 +1,25 @@
+/* =====================================================
+   HOME PAGE — Single Page Layout
+   All section-specific styles live in their own .css files.
+   This file only holds page-level utilities.
+   ===================================================== */
+
+.home-page {
+  min-height: 100vh;
+}
+
+/* Section-level ID wrapper — ensures sections don't lose top spacing */
+.home-page > section {
+  position: relative;
+}
+
+/* Utility: padding for generic sections */
+.section-padding {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+}

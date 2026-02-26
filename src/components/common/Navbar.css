@@ -1,0 +1,273 @@
+/* =====================================================
+   NAVBAR — Floating Pill (Cartoon Style)
+   ===================================================== */
+
+/* Wrapper: fixed container that centers the pill */
+.navbar-wrapper {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0 1rem;
+}
+
+/* The pill itself */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(10, 22, 40, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 9999px;
+  padding: 0.5rem 0.75rem;
+  pointer-events: auto;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  max-width: 1000px;
+  width: 100%;
+}
+
+.navbar-scrolled {
+  border-color: rgba(59, 130, 246, 0.45);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.2), 0 8px 32px rgba(0, 0, 0, 0.5);
+  background: rgba(10, 22, 40, 0.92);
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  transition: background var(--transition-base);
+  flex-shrink: 0;
+}
+
+.navbar-logo:hover {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.logo-image {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.5));
+}
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  background: linear-gradient(135deg, #60A5FA, #3B82F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-subtext {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  background: linear-gradient(135deg, #EC4899, #FBBF24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Desktop Navigation links */
+.navbar-links {
+  display: none;
+  align-items: center;
+  gap: 0.1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (min-width: 820px) {
+  .navbar-links {
+    display: flex;
+  }
+}
+
+.nav-link {
+  padding: 0.45rem 0.85rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  border-radius: 9999px;
+  transition: color var(--transition-base), background var(--transition-bounce), transform var(--transition-bounce);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(37, 99, 235, 0.15);
+  transform: scale(1.06);
+}
+
+/* CTA area (Discord btn + hamburger) */
+.navbar-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+/* Discord CTA Button */
+.nav-discord-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: transform var(--transition-bounce), box-shadow var(--transition-base);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+  white-space: nowrap;
+}
+
+.nav-discord-btn:hover {
+  transform: scale(1.07);
+  box-shadow: var(--glow-blue-strong);
+}
+
+/* Mobile Hamburger */
+.navbar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 9999px;
+  transition: background var(--transition-base), box-shadow var(--transition-base);
+}
+
+.navbar-toggle:hover {
+  background: rgba(37, 99, 235, 0.2);
+  box-shadow: var(--glow-blue);
+}
+
+@media (min-width: 820px) {
+  .navbar-toggle {
+    display: none;
+  }
+}
+
+/* Mobile Menu Panel */
+.mobile-menu {
+  position: fixed;
+  top: 5.5rem;
+  left: 1rem;
+  right: 1rem;
+  background: rgba(10, 22, 40, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), var(--glow-blue);
+  z-index: calc(var(--z-sticky) + 1);
+  pointer-events: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  border-radius: 12px;
+  transition: color var(--transition-base), background var(--transition-base), transform var(--transition-bounce);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+}
+
+.mobile-nav-link:hover {
+  color: #ffffff;
+  background: rgba(37, 99, 235, 0.12);
+  transform: translateX(5px);
+}
+
+.mobile-nav-discord {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.2rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  border-radius: 12px;
+  border: none;
+  text-decoration: none;
+  transition: transform var(--transition-bounce), box-shadow var(--transition-base);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+  margin-top: 0.4rem;
+}
+
+.mobile-nav-discord:hover {
+  transform: scale(1.03);
+  box-shadow: var(--glow-blue);
+}
+
+/* Mobile Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: var(--z-sticky);
+  backdrop-filter: blur(4px);
+  pointer-events: auto;
+}
+
+@media (min-width: 820px) {
+
+  .mobile-menu,
+  .mobile-menu-overlay {
+    display: none;
+  }
+}

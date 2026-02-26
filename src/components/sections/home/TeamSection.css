@@ -1,0 +1,203 @@
+/* =====================================================
+   TEAM SECTION
+   ===================================================== */
+
+.team-section {
+  background: var(--bg-alt);
+  padding: 5rem 0;
+  position: relative;
+}
+
+/* Rank label row */
+.team-rank-label {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.rank-label-text {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.4rem 1.4rem;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.04em;
+}
+
+.rank-founder {
+  background: rgba(251, 191, 36, 0.12);
+  color: #FCD34D;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.rank-staff {
+  background: rgba(37, 99, 235, 0.12);
+  color: #60A5FA;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.rank-mod {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+/* Hierarchy rows */
+.team-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Vertical connector between rows */
+.team-connector {
+  width: 2px;
+  height: 2.5rem;
+  background: linear-gradient(to bottom, rgba(59, 130, 246, 0.6), transparent);
+  margin: 0 auto 1.5rem;
+}
+
+/* Member Card — normal */
+.team-card {
+  background: var(--bg-card);
+  border: 2px solid rgba(var(--ring-color, 59 130 246), 0.3);
+  border-radius: var(--radius-card-lg);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  width: 160px;
+  transition: border-color var(--transition-base), box-shadow var(--transition-bounce), transform var(--transition-bounce);
+  cursor: default;
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.team-card:hover {
+  transform: scale(1.06) translateY(-4px);
+}
+
+/* Large card (Founders) */
+.team-card-large {
+  width: 220px;
+  padding: 2rem 1.5rem;
+}
+
+/* Avatar */
+.team-avatar-wrapper {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 3px solid var(--ring-color, #3B82F6);
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05);
+  transition: box-shadow var(--transition-base);
+}
+
+.team-card-large .team-avatar-wrapper {
+  width: 90px;
+  height: 90px;
+  border-width: 4px;
+}
+
+.team-card:hover .team-avatar-wrapper {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1), 0 0 20px var(--ring-color, #3B82F6);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--bg-deep);
+}
+
+/* Info */
+.team-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.team-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.team-card-large .team-name {
+  font-size: 1.1rem;
+}
+
+.team-role-badge {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  color: white;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.team-role-title {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+
+.team-bio {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .team-bio {
+    display: block;
+  }
+}
+
+/* Social icons */
+.team-socials {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+
+.team-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--bg-deep);
+  border-radius: 8px;
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+  transition: color var(--transition-base), background var(--transition-base);
+  cursor: pointer;
+}
+
+.team-social-icon:hover {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--color-blue-light);
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .team-card {
+    width: 140px;
+    padding: 1.25rem 1rem;
+  }
+
+  .team-card-large {
+    width: 160px;
+  }
+}

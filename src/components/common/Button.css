@@ -1,0 +1,220 @@
+/* =====================================================
+   BUTTON — Cartoon Pill Style
+   ===================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-bounce), box-shadow var(--transition-base), background var(--transition-base), opacity var(--transition-base);
+  letter-spacing: 0.01em;
+}
+
+.btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.5);
+  outline-offset: 2px;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.1em;
+}
+
+/* Sizes */
+.btn-sm {
+  font-size: 0.8rem;
+  padding: 0.45rem 1.1rem;
+}
+
+.btn-md {
+  font-size: 0.9rem;
+  padding: 0.65rem 1.5rem;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  padding: 0.8rem 1.85rem;
+}
+
+.btn-xl {
+  font-size: 1.05rem;
+  padding: 0.9rem 2.1rem;
+  font-weight: 800;
+}
+
+/* Primary — Bright Blue Gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(37, 99, 235, 0.45);
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: var(--glow-blue-strong);
+}
+
+/* Secondary — outline blue */
+.btn-secondary {
+  background: transparent;
+  color: var(--color-blue-lighter);
+  border: 2px solid rgba(59, 130, 246, 0.5);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: var(--color-blue-light);
+  color: var(--text-primary);
+}
+
+/* Accent */
+.btn-accent {
+  background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);
+  color: white;
+  box-shadow: 0 4px 18px rgba(236, 72, 153, 0.4);
+}
+
+.btn-accent:hover:not(:disabled) {
+  box-shadow: var(--glow-pink);
+}
+
+/* Outline */
+.btn-outline {
+  background: transparent;
+  color: var(--color-blue-light);
+  border: 2px solid var(--color-blue-vibrant);
+}
+
+.btn-outline:hover:not(:disabled) {
+  background: var(--color-blue-vibrant);
+  color: #ffffff;
+  box-shadow: var(--glow-blue);
+}
+
+/* Ghost */
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--text-primary);
+}
+
+/* Glass */
+.btn-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+}
+
+.btn-glass:hover:not(:disabled) {
+  background: rgba(37, 99, 235, 0.15);
+  border-color: var(--color-blue-light);
+  box-shadow: var(--glow-blue);
+}
+
+/* Success */
+.btn-success {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+}
+
+.btn-success:hover:not(:disabled) {
+  box-shadow: var(--glow-green);
+}
+
+/* Danger */
+.btn-danger {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+/* Cartoon — Extra fun with press effect */
+.btn-cartoon {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: #ffffff;
+  font-family: var(--font-display);
+  letter-spacing: 0.03em;
+  box-shadow: 0 5px 0 rgba(29, 78, 216, 0.6), 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+.btn-cartoon:hover:not(:disabled) {
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 7px 0 rgba(29, 78, 216, 0.6), var(--glow-blue);
+}
+
+.btn-cartoon:active:not(:disabled) {
+  transform: scale(0.98) translateY(3px);
+  box-shadow: 0 2px 0 rgba(29, 78, 216, 0.6);
+}
+
+/* Discord */
+.btn-discord {
+  background: linear-gradient(135deg, #5865F2, #4752C4);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(88, 101, 242, 0.45);
+}
+
+.btn-discord:hover:not(:disabled) {
+  box-shadow: 0 0 25px rgba(88, 101, 242, 0.65);
+}
+
+/* Full width */
+.w-full {
+  width: 100%;
+}
+
+/* Ripple Effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.btn:active::before {
+  width: 250px;
+  height: 250px;
+  opacity: 0;
+}

@@ -1,0 +1,180 @@
+/* =====================================================
+   ABOUT SECTION
+   ===================================================== */
+
+.about-section {
+  background: var(--bg-alt);
+  padding: 1rem 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-wave-top,
+.about-wave-bottom {
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.about-wave-top svg,
+.about-wave-bottom svg {
+  display: block;
+  width: 100%;
+  height: 70px;
+}
+
+/* Feature Cards */
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.about-feat-card {
+  background: var(--bg-card);
+  border: 2px solid rgba(59, 130, 246, 0.25);
+  border-radius: var(--radius-card-lg);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  transition: border-color var(--transition-base), box-shadow var(--transition-bounce), transform var(--transition-bounce);
+  cursor: default;
+}
+
+.about-feat-card:hover {
+  border-color: var(--color-blue-light);
+  box-shadow: var(--glow-blue);
+  transform: scale(1.04) translateY(-4px);
+}
+
+.about-feat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.85rem;
+  display: block;
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.about-feat-card:nth-child(2) .about-feat-icon {
+  animation-delay: 1s;
+}
+
+.about-feat-card:nth-child(3) .about-feat-icon {
+  animation-delay: 2s;
+}
+
+.about-feat-card:nth-child(4) .about-feat-icon {
+  animation-delay: 3s;
+}
+
+.about-feat-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.about-feat-desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* Stats Row */
+.about-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .about-stats-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.about-stat-item {
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: var(--radius-card-lg);
+  padding: 2rem 1.5rem;
+  border: 2px solid transparent;
+  transition: box-shadow var(--transition-base), transform var(--transition-bounce);
+}
+
+.about-stat-item:hover {
+  transform: scale(1.04);
+}
+
+.about-stat-blue {
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+.about-stat-blue:hover {
+  box-shadow: var(--glow-blue);
+}
+
+.about-stat-yellow {
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+.about-stat-yellow:hover {
+  box-shadow: var(--glow-yellow);
+}
+
+.about-stat-pink {
+  border-color: rgba(236, 72, 153, 0.3);
+}
+
+.about-stat-pink:hover {
+  box-shadow: var(--glow-pink);
+}
+
+.about-stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.about-stat-blue .about-stat-number {
+  display: inline-block;
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-stat-yellow .about-stat-number {
+  display: inline-block;
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-stat-pink .about-stat-number {
+  display: inline-block;
+  background: linear-gradient(135deg, #EC4899 0%, #BE185D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
